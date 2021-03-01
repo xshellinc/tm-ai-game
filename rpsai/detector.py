@@ -43,7 +43,7 @@ class Detector:
             self.results.append(np.argmax(detection[0]))
             
             cv2.imshow('frame', frame)
-            if cv2.waitKey(1) & 0xF == ord('q'):
+            if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
             
         self.camera.release()
